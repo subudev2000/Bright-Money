@@ -337,15 +337,12 @@
         ]
     }
     </script>
-    <!-- Add before closing </body> tag -->
 <script>
-    // Initialize dataLayer
+   
     window.dataLayer = window.dataLayer || [];
     
-    // GA4 Configuration
-    const GA4_MEASUREMENT_ID = 'G-QEKQ48J98T'; // Replace with your GA4 Measurement ID
+    const GA4_MEASUREMENT_ID = 'G-QEKQ48J98T'; 
     
-    // Core tracking functions
     const tracking = {
         pageView: () => {
             window.dataLayer.push({
@@ -394,12 +391,9 @@
         }
     };
     
-    // Event Listeners
     document.addEventListener('DOMContentLoaded', () => {
-        // Initial page view
         tracking.pageView();
-    
-        // Track CTA buttons
+        
         const buttons = {
             '.hero-cta': ['Get Started Now', 'Hero'],
             '.btn-sign-in': ['Sign In', 'Navigation'],
@@ -412,14 +406,12 @@
             });
         });
     
-        // Track Apply Now links
         document.querySelectorAll('.step-link').forEach((link, index) => {
             link.addEventListener('click', (e) => {
                 tracking.buttonClick('Apply Now', `Step ${index + 1}`);
             });
         });
     
-        // Track FAQ interactions
         document.querySelectorAll('.faq-item').forEach(item => {
             const question = item.querySelector('h3').textContent;
             item.querySelector('.faq-question').addEventListener('click', () => {
@@ -428,7 +420,6 @@
             });
         });
     
-        // Section visibility tracking
         const sectionObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
