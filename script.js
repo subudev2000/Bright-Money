@@ -1,4 +1,3 @@
-// Testimonials Data
 const testimonials = [
     {
         text: "To Pay off my credit card debt using Bright money App is far more easily easy to use and new customer service is excellent. Very helpful.",
@@ -27,7 +26,6 @@ const testimonials = [
     }
 ];
           
-          // FAQ Data
           const faqs = [
               {
                   question: "Can I pay off or close my account anytime?",
@@ -51,14 +49,10 @@ const testimonials = [
               }
           ];
           
-          // Initialize Testimonials - Static render
 function initTestimonials() {
     const testimonialsGrid = document.querySelector('.testimonials-grid');
-    
-    // Clear any existing content
+
     testimonialsGrid.innerHTML = '';
-    
-    // Add all testimonials at once
     testimonials.forEach(testimonial => {
         const card = document.createElement('div');
         card.className = 'testimonial-card';
@@ -71,8 +65,6 @@ function initTestimonials() {
     });
 }
 
-          
-          /// FAQ Functionality
 function initFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
     
@@ -80,26 +72,21 @@ function initFAQ() {
         const question = item.querySelector('.faq-question');
         
         question.addEventListener('click', () => {
-            // Close other items
             faqItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('active');
                 }
             });
             
-            // Toggle current item
             item.classList.toggle('active');
         });
     });
 }
-          
-          // Initialize when DOM is loaded
           document.addEventListener('DOMContentLoaded', () => {
               initTestimonials();
               initFAQ();
           });
-          
-          // Responsive Navigation
+
           const navToggle = document.querySelector('.nav-toggle');
           const navLinks = document.querySelector('.nav-links');
           
