@@ -44,6 +44,15 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <header class="hero" role="banner">
+        <div class="floating-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="circle-container">
+            <div class="rotating-circle"></div>
+        </div>
+        <div class="bright-dot"></div>
         <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="logo" itemscope itemtype="https://schema.org/Organization">
@@ -276,7 +285,7 @@
         <section class="cta" aria-labelledby="cta-heading">
             <div class="cta-container">
                 <div class="cta-content">
-                    <h2 id="cta-heading" class="cta-title">Crush Debt today</h2>
+                    <h2 id="cta-heading" class="cta-title">Crush Debt today<sup>1</sup></h2>
                     <h3 class="cta-subtitle">with Bright</h3>
                 </div>
                 <div class="cta-image" aria-hidden="true">
@@ -337,11 +346,11 @@
         ]
     }
     </script>
+
 <script>
-   
     window.dataLayer = window.dataLayer || [];
     
-    const GA4_MEASUREMENT_ID = 'G-QEKQ48J98T'; 
+    const GA4_MEASUREMENT_ID = 'G-QEKQ48J98T';
     
     const tracking = {
         pageView: () => {
@@ -393,7 +402,7 @@
     
     document.addEventListener('DOMContentLoaded', () => {
         tracking.pageView();
-        
+    
         const buttons = {
             '.hero-cta': ['Get Started Now', 'Hero'],
             '.btn-sign-in': ['Sign In', 'Navigation'],
